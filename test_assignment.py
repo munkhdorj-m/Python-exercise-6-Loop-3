@@ -37,4 +37,4 @@ def test2(input, expected):
 ])
 def test3(binary_input, expected):
     assert binary_to_decimal(binary_input) == expected
-    assert not check_contains_loop(binary_to_decimal)  # Likely uses in-built conversion or mathematical logic
+    assert check_contains_loop(binary_to_decimal)  
