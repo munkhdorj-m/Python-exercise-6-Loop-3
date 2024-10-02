@@ -1,39 +1,40 @@
 import pytest
 import inspect
-from assignment import find_factorial, sum_odd_numbers, is_perfect_number
+from assignment import nth_power, reverse_number, binary_to_decimal
 
 def check_contains_loop(function):
     source = inspect.getsource(function)
     return 'for' in source or 'while' in source
 
-@pytest.mark.parametrize("input, expected", [
-    (5, 120),
-    (1, 1),
-    (3, 6),
-    (7, 5040)
+@pytest.mark.parametrize("base, exponent, expected", [
+    (3, 4, 81),
+    (5, 2, 25),
+    (10, 5, 100000),
+    (2, 10, 1024),
+    (7, 0, 1)
 ])
-def test1(input, expected):
-    assert find_factorial(input) == expected
-    assert check_contains_loop(find_factorial)
+def test_nth_power(base, exponent, expected):
+    assert nth_power(base, exponent) == expected
+    assert check_contains_loop(nth_power)
 
 @pytest.mark.parametrize("input, expected", [
-    (5, 25),
+    (1234, 4321),
+    (19283, 38291),
     (1, 1),
-    (4, 16),
-    (0, 0),
-    (3, 9)
+    (987654, 456789),
+    (0, 0)
 ])
-def test2(input, expected):
-    assert sum_odd_numbers(input) == expected
-    assert check_contains_loop(sum_odd_numbers)
+def test_reverse_number(input, expected):
+    assert reverse_number(input) == expected
+    assert check_contains_loop(reverse_number)  # Likely uses loops to reverse digits
 
-@pytest.mark.parametrize("input, expected", [
-    (6, True),
-    (28, True),
-    (12, False),
-    (496, True),
-    (8, False)
+@pytest.mark.parametrize("binary_input, expected", [
+    (1010, 10),
+    (110111, 55),
+    (11111111, 255),
+    (100000, 32),
+    (0, 0)
 ])
-def test3(input, expected):
-    assert is_perfect_number(input) == expected
-    assert check_contains_loop(sum_odd_numbers)
+def test_binary_to_decimal(binary_input, expected):
+    assert binary_to_decimal(binary_input) == expected
+    assert not check_contains_loop(binary_to_decimal)  # Likely uses in-built conversion or mathematical logic
