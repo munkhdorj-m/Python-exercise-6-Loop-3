@@ -26,7 +26,7 @@ def test1(base, exponent, expected):
 ])
 def test2(input, expected):
     assert reverse_number(input) == expected
-    assert check_contains_loop(reverse_number)  # Likely uses loops to reverse digits
+    assert check_contains_loop(reverse_number)
 
 @pytest.mark.parametrize("binary_input, expected", [
     (1010, 10),
