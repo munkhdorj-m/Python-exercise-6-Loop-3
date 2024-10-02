@@ -1,4 +1,4 @@
-# Python LOOP 2
+# Python LOOP 3
 
 Python Loops PPT:
 [https://drive.google.com/drive/folders/1V9L54sGRVtGork9DONvOaFZq5krgh9TB?usp=sharing
@@ -10,18 +10,19 @@ Python Loops PPT:
 
 **Problem:**
 
-Find the factorial of a number. _5! = 1x2x3x4x5=120_
+Find nth power of a given number.
 
 **Example:**
+3 to the power of 4 is 3^4=81
 
-	Input: 5
-	Output: 120
+	Input: 3 4
+	Output: 81
  
- 	Input: 10
-	Output: 3628800
+ 	Input: 5 2
+	Output: 25
  
-  	Input: 1
-	Output: 1
+  	Input: 10 5
+	Output: 10000
 
 ---
 
@@ -29,19 +30,18 @@ Find the factorial of a number. _5! = 1x2x3x4x5=120_
 
 **Problem:**
 
-Find the sum of first n odd natural numbers.
-_If input is 5. The odd numbers are: 1 3 5 7 9_
+Find reverse of a given number.
 
 **Example:**
 
-	Input: 5
-	Output: 25
+	Input: 1234
+	Output: 4321
  
- 	Input: 2
-	Output: 4
+ 	Input: 19283
+	Output: 38291
  
-  	Input: 10
-	Output: 100
+  	Input: 1
+	Output: 1
 
 
 ---
@@ -50,19 +50,17 @@ _If input is 5. The odd numbers are: 1 3 5 7 9_
 
 **Problem:**
 
-Check if number is perfect number.
-_Perfect number is a positive integer that is equal to the sum of its positive proper divisors._
-_For example 6 is perfect number._
+Convert given binary number to decimal number.
 
 **Example**
 
- 	Input: 6
-  	Output: True
+ 	Input: 1010
+  	Output: 10
  
-  	Input: 15
-  	Output: False
+  	Input: 110111
+  	Output: 55
  
-  	Input: 28
-  	Output: True
+  	Input: 11111111
+  	Output: 255
 ---
 
