@@ -13,7 +13,7 @@ def check_contains_loop(function):
     (2, 10, 1024),
     (7, 0, 1)
 ])
-def test_nth_power(base, exponent, expected):
+def test1(base, exponent, expected):
     assert nth_power(base, exponent) == expected
     assert check_contains_loop(nth_power)
 
@@ -24,7 +24,7 @@ def test_nth_power(base, exponent, expected):
     (987654, 456789),
     (0, 0)
 ])
-def test_reverse_number(input, expected):
+def test2(input, expected):
     assert reverse_number(input) == expected
     assert check_contains_loop(reverse_number)  # Likely uses loops to reverse digits
 
@@ -35,6 +35,6 @@ def test_reverse_number(input, expected):
     (100000, 32),
     (0, 0)
 ])
-def test_binary_to_decimal(binary_input, expected):
+def test3(binary_input, expected):
     assert binary_to_decimal(binary_input) == expected
     assert not check_contains_loop(binary_to_decimal)  # Likely uses in-built conversion or mathematical logic
